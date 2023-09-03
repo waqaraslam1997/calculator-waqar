@@ -1,4 +1,10 @@
+#! /usr/bin/env node
+
 import inquirer from "inquirer";
+import {sum} from "./operations/add.js"
+import {sub} from "./operations/Subtract.js"
+import {multiply} from "./operations/multiply.js"
+import {divide} from "./operations/divide.js"
 
 const answer : {
     one: number;
@@ -25,19 +31,19 @@ const answer : {
 
 const  {one, two, operator} =  answer ;
 
+let result : number = 0;
 if(one && two && operator){
-    let result: number = 0;
     if(operator === "+"){
-        result = one + two;
+      result =  sum(one, two)
     }
     else if(operator === "-"){
-        result = one - two;
+        result = sub(one, two)
     }
     else if(operator === "*"){
-        result = one * two;
+        result = multiply(one, two)
     }
     else if(operator === "/"){
-        result = one / two;
+        result = divide(one, two)
     }
 
 

@@ -1,19 +1,30 @@
 {
-  "name": "calculator-waqar",
-  "version": "1.0.0",
-  "description": "",
-  "type":"module",
+  "name": "waqar-cli-calc",
+  "version": "1.0.1",
+  "description": "Calculator by Waqar Aslam",
+  "type": "module",
   "main": "index.js",
+  "bin": "./calc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Waqar Aslam",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^9.2.10"
+    "inquirer": "^9.2.10",
+    "waqar-cli-calc": "^1.0.1",
+    "zahoor_calc": "^1.0.0"
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waqaraslam1997/calculator-waqar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/waqaraslam1997/calculator-waqar/issues"
+  },
+  "homepage": "https://github.com/waqaraslam1997/calculator-waqar#readme"
 }

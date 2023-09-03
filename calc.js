@@ -1,4 +1,9 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
+import { sum } from "./operations/add.js";
+import { sub } from "./operations/Subtract.js";
+import { multiply } from "./operations/multiply.js";
+import { divide } from "./operations/divide.js";
 const answer = await inquirer.prompt([
     {
         type: "list",
@@ -18,19 +23,19 @@ const answer = await inquirer.prompt([
     },
 ]);
 const { one, two, operator } = answer;
+let result = 0;
 if (one && two && operator) {
-    let result = 0;
     if (operator === "+") {
-        result = one + two;
+        result = sum(one, two);
     }
     else if (operator === "-") {
-        result = one - two;
+        result = sub(one, two);
     }
     else if (operator === "*") {
-        result = one * two;
+        result = multiply(one, two);
     }
     else if (operator === "/") {
-        result = one / two;
+        result = divide(one, two);
     }
     console.log(`Your result of: ${one} ${operator} ${two} = ${result}`);
 }
